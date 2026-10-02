@@ -29,6 +29,10 @@ public class CheckOutPage extends AbstractComponents{
 	@FindBy(css = ".ta-results button")
 	List<WebElement> countryLists;			
 	
+	@FindBy(xpath="//a[normalize-space()='Place Order']")
+	WebElement placeOrder;
+	
+	
 	public void selectCountry(String countryNamee)
 	{
 	    selectCountry.sendKeys(countryNamee);
@@ -43,6 +47,12 @@ public class CheckOutPage extends AbstractComponents{
 	            break;
 	        }
 	    }
+	}
+	
+	public ConfirmationPage submitOrder() {
+		placeOrder.click();
+		            return new ConfirmationPage(driver);
+	
 	}
 		
 	
