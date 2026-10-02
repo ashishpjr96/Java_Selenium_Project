@@ -14,6 +14,7 @@ import org.testng.Assert;
 
 import SeleniumJava.PageObjects.CartPage;
 import SeleniumJava.PageObjects.CheckOutPage;
+import SeleniumJava.PageObjects.ConfirmationPage;
 import SeleniumJava.PageObjects.LandingPage;
 import SeleniumJava.PageObjects.ProductCatalouge;
 
@@ -39,7 +40,12 @@ public class SubmitTest {
 		Assert.assertTrue(match);
 		CheckOutPage check=cart.goToCheckOut();
 		check.selectCountry("Indi");
-	
+		
+		ConfirmationPage confirmationPage =check.submitOrder();
+		String confirmationMessage= confirmationPage.getConfirmationMessage();
+		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
+		driver.close();
+		
+		
 	}
-
 }
