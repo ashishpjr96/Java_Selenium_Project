@@ -29,10 +29,6 @@ public class SubmitTest extends BaseTest{
         
 		
 		String prodName="ZARA COAT 3";
-	
-		
-	
-		LandingPage landingPage=launchApplication();
 		ProductCatalouge productLis=landingPage.loginPage("admin96@gmail.com", "Admin@1234");
 	
 		productLis.getProductName(prodName);
@@ -41,6 +37,7 @@ public class SubmitTest extends BaseTest{
 		
 		boolean match=cart.verifyProductName(prodName);
 		Assert.assertTrue(match);
+		
 		CheckOutPage check=cart.goToCheckOut();
 		check.selectCountry("Indi");
 		

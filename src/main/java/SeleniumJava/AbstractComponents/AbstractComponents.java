@@ -25,6 +25,7 @@ public class AbstractComponents {
 	@FindBy(xpath="//button[@routerlink='/dashboard/cart']")
 	WebElement goToCart;
 	
+	
 	public void waitForElementsToAppear(List<WebElement> elements) {
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -35,6 +36,12 @@ public class AbstractComponents {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findby));
+
+	}
+	public void waitForWebElementToAppear(WebElement findby) {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfAllElements(findby));
 
 	}
 
