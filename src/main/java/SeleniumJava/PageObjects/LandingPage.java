@@ -30,6 +30,8 @@ public class LandingPage extends AbstractComponents{
    @FindBy(css="#login")
    WebElement loginButton;
    
+   @FindBy(xpath="//div[@id='toast-container']")
+   WebElement errorToast;
    
    public ProductCatalouge loginPage(String emailID,String password) {
 	   
@@ -43,6 +45,12 @@ public class LandingPage extends AbstractComponents{
    public void goTo()
    {
 		driver.get("https://rahulshettyacademy.com/client");
+   }
+   
+   public String getErrorMessage() {
+	   
+	   waitForWebElementToAppear(errorToast);
+	  return errorToast.getText();
    }
    
 }
