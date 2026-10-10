@@ -19,16 +19,17 @@ import SeleniumJava.PageObjects.CartPage;
 import SeleniumJava.PageObjects.CheckOutPage;
 import SeleniumJava.PageObjects.ConfirmationPage;
 import SeleniumJava.PageObjects.LandingPage;
+import SeleniumJava.PageObjects.OrdersPage;
 import SeleniumJava.PageObjects.ProductCatalouge;
 
 public class SubmitTest extends BaseTest{
-     
+	String prodName="ZARA COAT 3";
 	@Test()
 	public void SubmitTest() throws IOException {
 		// TODO Auto-generated method stub
         
 		
-		String prodName="ZARA COAT 3";
+	
 		ProductCatalouge productLis=landingPage.loginPage("admin96@gmail.com", "Admin@1234");
 	
 		productLis.getProductName(prodName);
@@ -47,5 +48,13 @@ public class SubmitTest extends BaseTest{
 		//driver.close();
 		
 		
+	}
+	
+	@Test (dependsOnMethods={"SubmitTest"})
+	public void orderHistroyTest()
+	{
+		ProductCatalouge productLis=landingPage.loginPage("admin96@gmail.com", "Admin@1234");
+		OrdersPage ordersPage=productLis.goToOrdersPage();
+		Assert.assertTrue(ordersPage.verifyOrderList(prodName));
 	}
 }
