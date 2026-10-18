@@ -12,7 +12,7 @@ public class ErrrorValidationTest extends BaseTest {
 	
 	
 	
-	@Test()
+	@Test(groups= {"ErrorHandling"})
 	public void LoginErrorValidation() throws IOException {
 		// TODO Auto-generated method stub
         
