@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ErrorValidationTest(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="SubmitTest(failed)">
+    <groups>
+      <run>
+        <include name="Purchase"/>
+      </run>
+    </groups>
     <classes>
-      <class name="SeleniumJava.SeleniumFrameworkProject_26.ErrrorValidationTest">
+      <class name="SeleniumJava.SeleniumFrameworkProject_26.SubmitTest">
         <methods>
           <include name="tearDown"/>
-          <include name="LoginErrorValidation"/>
           <include name="launchApplication"/>
-          <include name="ProductErrorValidation"/>
+          <include name="SubmitTest" invocation-numbers="1"/>
         </methods>
-      </class> <!-- SeleniumJava.SeleniumFrameworkProject_26.ErrrorValidationTest -->
+      </class> <!-- SeleniumJava.SeleniumFrameworkProject_26.SubmitTest -->
     </classes>
-  </test> <!-- ErrorValidationTest(failed) -->
+  </test> <!-- SubmitTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
