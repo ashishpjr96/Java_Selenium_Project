@@ -1,17 +1,24 @@
 package SeleniumFrameworkProject_26.TestComponents;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import SeleniumJava.PageObjects.LandingPage;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.ObjectMapper;
 
 public class BaseTest {
 	public WebDriver driver;
@@ -35,6 +42,25 @@ public class BaseTest {
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	return driver;
+	}
+	
+	
+	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException
+	{
+		
+		//reading json to String
+	String jsonContent=	FileUtils.readFileToString(new File(filePath),StandardCharsets.UTF_8);
+	
+	
+	//converting string to hashmap using jackson data bind dependency
+	
+	ObjectMapper mapper =new ObjectMapper();
+	
+	List<HashMap<String,String>> data =mapper.readValue( jsonContent, new TypeReference< List <HashMap<String, String>>> () 
+	{
+	} );
+	return data;
+		
 	}
 	
 	@BeforeMethod(alwaysRun=true)
