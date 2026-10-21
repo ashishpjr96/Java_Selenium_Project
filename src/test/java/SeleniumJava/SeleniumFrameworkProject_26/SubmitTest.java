@@ -63,20 +63,21 @@ public class SubmitTest extends BaseTest{
 	
 	
 	@DataProvider()
-    public Object[][] getData()
+    public Object[][] getData() throws IOException
 	{
-		HashMap<Object,Object> map =new HashMap<Object,Object>();
-		map.put("email","admin96@gmail.com");
-		map.put("password","Admin@1234");
-		map.put("productName","ZARA COAT 3");
+		/*
+		 * HashMap<Object,Object> map =new HashMap<Object,Object>();
+		 * map.put("email","admin96@gmail.com"); map.put("password","Admin@1234");
+		 * map.put("productName","ZARA COAT 3");
+		 * 
+		 * 
+		 * HashMap<Object,Object> map1 =new HashMap<Object,Object>();
+		 * map1.put("email","rahulshetty@gmail.com");
+		 * map1.put("password","Iamking@000"); map1.put("productName","iphone 13 pro");
+		 */
 		
-		
-		HashMap<Object,Object> map1 =new HashMap<Object,Object>();
-		map1.put("email","rahulshetty@gmail.com");
-		map1.put("password","Iamking@000");
-		map1.put("productName","iphone 13 pro");
-		
-		return new Object[][] {{map} ,{map1} };
+		List<HashMap<String ,String>>data= getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\SeleniumFrameworkProject_26\\Data\\PurchaseOrder.json");
+		return new Object[][] {{data.get(0)} ,{data.get(1)} };
 	}
 	
 }

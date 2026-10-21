@@ -12,7 +12,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="launchApplication"/>
-          <include name="SubmitTest" invocation-numbers="1"/>
+          <include name="SubmitTest"/>
         </methods>
       </class> <!-- SeleniumJava.SeleniumFrameworkProject_26.SubmitTest -->
     </classes>
