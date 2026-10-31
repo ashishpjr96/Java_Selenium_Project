@@ -1,56 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-21T10:40:44 IST" name="Suite" finished-at="2026-10-21T10:41:23 IST" duration-ms="38861">
+  <suite started-at="2026-10-31T12:54:07 IST" name="Suite" finished-at="2026-10-31T12:54:07 IST" duration-ms="0">
     <groups>
+      <group name="ErrorHandling">
+        <method signature="ErrrorValidationTest.LoginErrorValidation()[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.ErrrorValidationTest@54e7df6a]" name="LoginErrorValidation" class="SeleniumJava.SeleniumFrameworkProject_26.ErrrorValidationTest"/>
+      </group> <!-- ErrorHandling -->
       <group name="Purchase">
-        <method signature="SubmitTest.SubmitTest(java.util.HashMap)[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@2053d869]" name="SubmitTest" class="SeleniumJava.SeleniumFrameworkProject_26.SubmitTest"/>
+        <method signature="SubmitTest.SubmitTest(java.util.HashMap)[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@36060e]" name="SubmitTest" class="SeleniumJava.SeleniumFrameworkProject_26.SubmitTest"/>
       </group> <!-- Purchase -->
     </groups>
-    <test started-at="2026-10-21T10:40:44 IST" name="ErrorValidationTest" finished-at="2026-10-21T10:40:44 IST" duration-ms="6">
-    </test> <!-- ErrorValidationTest -->
-    <test started-at="2026-10-21T10:40:44 IST" name="SubmitTest" finished-at="2026-10-21T10:41:23 IST" duration-ms="38861">
-      <class name="SeleniumJava.SeleniumFrameworkProject_26.SubmitTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@2053d869]" started-at="2026-10-21T10:40:45 IST" name="launchApplication" finished-at="2026-10-21T10:40:51 IST" duration-ms="5852" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="SubmitTest(java.util.HashMap)[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@2053d869]" started-at="2026-10-21T10:40:51 IST" name="SubmitTest" data-provider="getData" finished-at="2026-10-21T10:41:05 IST" duration-ms="14744" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Admin@1234, email=admin96@gmail.com, productName=ZARA COAT 3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SubmitTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@2053d869]" started-at="2026-10-21T10:41:05 IST" name="tearDown" finished-at="2026-10-21T10:41:06 IST" duration-ms="158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@2053d869]" started-at="2026-10-21T10:41:06 IST" name="launchApplication" finished-at="2026-10-21T10:41:08 IST" duration-ms="2677" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="SubmitTest(java.util.HashMap)[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@2053d869]" started-at="2026-10-21T10:41:08 IST" name="SubmitTest" data-provider="getData" finished-at="2026-10-21T10:41:23 IST" duration-ms="14890" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Iamking@000, email=rahulshetty@gmail.com, productName=iphone 13 pro}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SubmitTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumJava.SeleniumFrameworkProject_26.SubmitTest@2053d869]" started-at="2026-10-21T10:41:23 IST" name="tearDown" finished-at="2026-10-21T10:41:23 IST" duration-ms="168" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- SeleniumJava.SeleniumFrameworkProject_26.SubmitTest -->
-    </test> <!-- SubmitTest -->
   </suite> <!-- Suite -->
 </testng-results>

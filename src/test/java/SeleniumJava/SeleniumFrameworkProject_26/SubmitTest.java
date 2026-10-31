@@ -1,11 +1,15 @@
 package SeleniumJava.SeleniumFrameworkProject_26;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -62,12 +66,14 @@ public class SubmitTest extends BaseTest{
 	}
 	
 	
+	
 	@DataProvider()
     public Object[][] getData() throws IOException
 	{
 		/*
 		 * HashMap<Object,Object> map =new HashMap<Object,Object>();
-		 * map.put("email","admin96@gmail.com"); map.put("password","Admin@1234");
+		 * map.put("email","admin96@gmail.com"); 
+		 * map.put("password","Admin@1234");
 		 * map.put("productName","ZARA COAT 3");
 		 * 
 		 * 
@@ -77,6 +83,7 @@ public class SubmitTest extends BaseTest{
 		 */
 		
 		List<HashMap<String ,String>>data= getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\SeleniumFrameworkProject_26\\Data\\PurchaseOrder.json");
+		
 		return new Object[][] {{data.get(0)} ,{data.get(1)} };
 	}
 	
